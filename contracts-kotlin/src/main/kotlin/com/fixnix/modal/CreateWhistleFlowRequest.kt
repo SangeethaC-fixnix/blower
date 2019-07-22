@@ -8,6 +8,7 @@ data class CreateWhistleFlowRequest (
 
     val tipNo: String,
     val encryptedSecret:String,
+    val company: Party,
     val incidentType:String,
     val association: String,
     val awareOf:String,
@@ -17,7 +18,6 @@ data class CreateWhistleFlowRequest (
     val auditAware:String,
     val generalNature:String,
     val occurancePlace:String,
-    val blower: String,
-    val company: Party,
+    val reward: String,
     val reviewer: Party
     )

@@ -17,6 +17,7 @@ data class WhistleState(
 
                           val tipNo: String,
                           val encryptedSecret:String,
+                          val company:Party,
                           val incidentType:String,
                           val association: String,
                           val awareOf:String,
@@ -26,8 +27,7 @@ data class WhistleState(
                           val auditAware:String,
                           val generalNature:String,
                           val occurancePlace:String,
-                          val blower: String,
-                          val company:Party,
+                          val reward: String,
                           val reviewer:Party,
                           override val linearId: UniqueIdentifier = UniqueIdentifier()): LinearState, QueryableState {
     override val participants: List<AbstractParty>
@@ -38,6 +38,7 @@ data class WhistleState(
             is OrderSchemaV1 -> OrderSchemaV1.PersistantOrder(
                     this.tipNo,
                     this.encryptedSecret,
+                    this.company.toString(),
                     this.incidentType,
                     this.association,
                     this.awareOf,
@@ -47,8 +48,7 @@ data class WhistleState(
                     this.auditAware,
                     this.generalNature,
                     this.occurancePlace,
-                    this.blower,
-                    this.company.toString(),
+                    this.reward,
                     this.reviewer.toString(),
                     this.linearId.id
             )

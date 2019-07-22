@@ -26,6 +26,9 @@ object OrderSchemaV1:MappedSchema(
             @Column(name="encryptedSecret")
             var encryptedSecret: String,
 
+            @Column(name="company")
+            var company: String,
+
             @Column(name="incidentType")
             var incidentType: String,
 
@@ -53,11 +56,8 @@ object OrderSchemaV1:MappedSchema(
             @Column(name="occurancePlace")
             var occurancePlace: String,
 
-            @Column(name="blower")
-            var blower: String,
-
-            @Column(name="company")
-            var company: String,
+            @Column(name="reward")
+            var reward: String,
 
             @Column(name="reviewer")
             var reviewer: String,

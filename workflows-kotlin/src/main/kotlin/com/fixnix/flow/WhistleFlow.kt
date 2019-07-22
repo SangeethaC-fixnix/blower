@@ -50,6 +50,7 @@ object ComplaintCreateFlow {
             val complaint= WhistleState(
                     whistle.tipNo,
                     whistle.encryptedSecret,
+                    whistle.company,
                     whistle.incidentType,
                     whistle.association,
                     whistle.awareOf,
@@ -59,8 +60,7 @@ object ComplaintCreateFlow {
                     whistle.auditAware,
                     whistle.generalNature,
                     whistle.occurancePlace,
-                    whistle.blower,
-                    whistle.company,
+                    whistle.reward,
                     whistle.reviewer
             )
             val command= Command(WhistleContract.Commands.ComplaintReg(),complaint.participants.map { it.owningKey })
